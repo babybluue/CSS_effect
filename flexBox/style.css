@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.parent {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.child1 {
+  height: 200px;
+  background: greenyellow;
+  flex: 0 200px;
+}
+.child2 {
+  height: 200px;
+  flex: 1 200px;
+  background: hotpink;
+}
+.child3 {
+  height: 200px;
+  flex: 0 200px;
+  background: dodgerblue;
+}

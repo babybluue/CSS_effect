@@ -1,0 +1,26 @@
+@mixin flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+$blue: lightblue;
+
+@import "./box3";
+
+.container {
+  @include flex();
+  width: 100%;
+  height: 100vh;
+  .box1 {
+    width: 40%;
+    height: 40vh;
+    background: $blue;
+    @include flex();
+  }
+  .box2 {
+    @extend .box1;
+    @include flex();
+  }
+}

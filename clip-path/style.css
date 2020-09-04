@@ -1,0 +1,26 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 500px;
+  width: 500px;
+  background: lightblue;
+  border: 1px solid black;
+}
+
+.content {
+  height: 50%;
+  width: 50%;
+  background: lightsteelblue;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: circle(20px at 0 0);
+  transition: all 2s ease-out;
+}
+.content.open {
+  clip-path: circle(200px at 10% 10%);
+}

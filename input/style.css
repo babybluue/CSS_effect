@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.input {
+  margin: 30px 0;
+}
+.input input {
+  border: none;
+  border-bottom: 2px solid gray;
+  outline: none;
+  transition: all 0.2s ease;
+}
+.labelName {
+  position: relative;
+}
+.input span {
+  position: absolute;
+  left: -170px;
+  transition: all 1s ease;
+}
+.input input:focus + .labelName span,
+.input input:valid + .labelName span {
+  color: rgb(24, 228, 85);
+  top: -20px;
+}
+.input input:focus,
+.input input:valid {
+  border-bottom: 2px solid rgb(24, 228, 85);
+}

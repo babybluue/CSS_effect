@@ -1,0 +1,49 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid green;
+}
+.left,
+.right {
+  width: 40%;
+  height: 60%;
+  border: solid 1px black;
+  position: relative;
+}
+.left img,
+.right img {
+  height: 100%;
+  width: 100%;
+}
+
+.left img:last-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+.left:hover img:last-child {
+  opacity: 1;
+}
+.right::after {
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+.right:hover::after {
+  position: absolute;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "hello world";
+  color: white;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
